@@ -266,6 +266,30 @@
       <h2>O que você vai aprender?</h2>
       <p>Você vai descobrir como usar ferramentas de inteligência artificial para ganhar dinheiro criando conteúdos, atendendo empresas, automatizando processos e até mesmo criando produtos digitais — tudo isso com tutoriais simples, mesmo para quem nunca programou.</p>
     </div>
+    
+<section style="background-color: #0b0b0b; padding: 60px 20px; text-align: center; font-family: 'Arial', sans-serif;">
+  <h2 style="background: linear-gradient(#fca311, #fca311, #fca311); -webkit-background-clip: text; color: transparent; font-size: 32px; margin-bottom: 30px;">
+    Descubra o Poder da Inteligência Artificial
+  </h2>
+
+
+
+  <div class="image-container" style="max-width: 600px; margin: auto;">
+    <img src="Foto46.png" alt="Comparação IA x Trabalho" class="fade-in-img" style="width: 100%; border-radius: 20px; border: 2px solid #fca311;" />
+  </div>
+</section>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-img {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+</style>
 
     <div class="section">
       <h2>Por que esse método funciona?</h2>
@@ -314,16 +338,161 @@
       </div>
       <div class="certificado">
         <img src="Foto7.png">
+      </div><br>
+    <br>  <!-- BOTÃO PRINCIPAL -->
+
+
+<!-- FORMULÁRIO OCULTO -->
+<div id="formPopup" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+  <div style="background: #222; padding: 30px; border-radius: 12px; width: 90%; max-width: 400px; text-align: center; color: white; position: relative;">
+    
+    <h2 style="margin-top: 0;">Enviar Comprovante</h2>
+    <p>Escolha como quer receber o conteúdo:</p>
+
+    <select id="tipoContato" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+      <option value="email">E-mail</option>
+      <option value="whatsapp">WhatsApp</option>
+    </select>
+
+    <input id="contato" type="text" placeholder="Seu e-mail ou número com DDD" style="width: 100%; padding: 10px; margin-bottom: 10px;" required>
+
+    <input type="file" id="comprovante" accept="image/*" style="width: 100%; margin-bottom: 10px;" required>
+
+    <button onclick="enviarFormulario()" style="padding: 10px 20px; background-color: #ff6600; color: white; border: none; border-radius: 8px; cursor: pointer;">Enviar</button>
+
+    <div id="animacao" style="display: none; margin-top: 20px;"></div>
+
+    <span onclick="fecharFormulario()" style="position: absolute; top: 10px; right: 15px; cursor: pointer; color: #ff6666;">X</span>
+  </div>
+</div>
+
+<!-- ANIMAÇÃO COM FOGUETE + CONFETES -->
+<script>
+  function abrirFormulario() {
+    document.getElementById("formPopup").style.display = "flex";
+  }
+
+  function fecharFormulario() {
+    document.getElementById("formPopup").style.display = "none";
+  }
+
+  function enviarFormulario() {
+    const contato = document.getElementById("contato").value;
+    const arquivo = document.getElementById("comprovante").files[0];
+
+    if (!contato || !arquivo) {
+      alert("Preencha todos os campos e envie o comprovante.");
+      return;
+    }
+
+    // Animação
+    const animacao = document.getElementById("animacao");
+    animacao.innerHTML = `
+      <div style="font-size: 50px; animation: boom 0.5s ease-out;">🚀</div>
+      <div style="color: orange; font-size: 24px; font-weight: bold;">Enviado com sucesso!</div>
+      <div style="font-size: 30px;">🎉🎊✨🎉</div>
+    `;
+    animacao.style.display = "block";
+
+    setTimeout(() => {
+      animacao.style.display = "none";
+      fecharFormulario();
+    }, 4000);
+  }
+</script>
+
+<!-- ANIMAÇÃO EXTRA (opcional) -->
+<style>
+  @keyframes boom {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { transform: translateY(-20px); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+  }
+</style>
+
+    </div>
+<!-- Fonte moderna e limpa do Google -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  @keyframes pulseMinimal {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  .titulo-animado {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #FFA726;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: pulseMinimal 2.5s infinite ease-in-out;
+  }
+
+  .box-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  .box-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .caixa {
+    flex: 1;
+    min-width: 270px;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(255,140,0,0.25);
+  }
+</style>
+
+<section style="background-color: #000; color: #fff; padding: 45px 18px;">
+  <div style="max-width: 950px; margin: auto;">
+    <h2 class="titulo-animado">Rotina Cansativa ou Renda Inteligente?</h2>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; justify-content: center;">
+      <div class="caixa" style="background-color: #000; border: 2px solid #FF8C00;">
+        <h3 class="box-title" style="color: #FFA726;">Trabalho Tradicional</h3>
+        <ul class="box-text" style="list-style: none; padding-left: 0; margin: 0;">
+          <li>8h por dia</li>
+          <li>Salário fixo</li>
+          <li>Desgaste emocional</li>
+          <li>Sem liberdade de tempo</li>
+          <li>Depende de chefes e empresas</li>
+        </ul>
+      </div>
+
+      <div class="caixa" style="background: linear-gradient(135deg, #FF8C00, #FF6F00);">
+        <h3 class="box-title" style="color: #fff;">Com IA e Estratégias Certas</h3>
+        <ul class="box-text" style="list-style: none; padding-left: 0; margin: 0;">
+          <li>1h por dia</li>
+          <li>Renda escalável</li>
+          <li>Autonomia total</li>
+          <li>Mais tempo livre</li>
+          <li>Você no controle</li>
+        </ul>
       </div>
     </div>
+  </div>
+</section>
 
     <div class="autoridade">
       <h2>Aprenda com os melhores especialistas em Inteligência Artificial</h2>
       <p>Nossa ferramenta é desenvolvido por profissionais com mais de 10 anos de experiência em IA, ajudando milhares de pessoas a começar suas jornadas de sucesso com inteligência artificial.</p>
     </div>
 
-    <a href="https://seulink.com/checkout" class="button">Comece Agora e Lucre com IA Hoje</a>
+    <a href="https://go.perfectpay.com.br/PPU38CPMIKP" class="button">Comece Agora e Lucre com IA Hoje</a>
   </div>
+  
 </body>
 
 </html>
